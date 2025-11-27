@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khelbo</title>
+    <meta name="theme-color" content="#0A0F1F">
+    <!-- Orbitron & Inter fonts for esports style -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">KHELBO</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#tournaments">Tournaments</a></li>
+            <li><a href="#clubs">Clubs</a></li>
+            <li><a href="#streams">Streams</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to KHELBO</h1>
+        <p>The Ultimate Esports Platform</p>
+        <div class="cta-buttons">
+            <button id="joinTournamentBtn">Join Tournament</button>
+            <button id="createClubBtn">Create Club</button>
+            <button id="watchLiveBtn">Watch Live</button>
+        </div>
+    </section>
+
+
+        <!-- Featured Tournaments Carousel -->
+        <section class="featured-tournaments" id="tournaments">
+                <h2>Featured Tournaments</h2>
+                <div class="carousel" id="tournamentCarousel">
+                        <!-- Dynamic tournament cards here -->
+                </div>
+        </section>
+
+        <!-- Animated Stats/HUD Section -->
+        <section class="stats-hud fade-slide-up" style="display:flex;justify-content:center;gap:2.5rem;padding:2.5rem 0 1.5rem 0;">
+            <div class="hud-stats neon-pulse" style="position:relative;min-width:170px;background:var(--glass-bg);border-radius:2rem;box-shadow:0 0 16px var(--neon-blue);padding:2.2rem 1.2rem 1.2rem 1.2rem;backdrop-filter:blur(8px);">
+                <div class="stat-float" style="font-family:'Orbitron',Arial,sans-serif;font-size:2.8rem;color:var(--neon-blue);font-weight:900;text-align:center;letter-spacing:0.08em;">5</div>
+                <div style="color:var(--text-main);font-family:'Orbitron',Arial,sans-serif;font-size:1.2rem;text-align:center;margin-top:0.3rem;letter-spacing:0.12em;">Tournaments</div>
+            </div>
+            <div class="hud-stats neon-pulse" style="position:relative;min-width:170px;background:var(--glass-bg);border-radius:2rem;box-shadow:0 0 16px var(--neon-purple);padding:2.2rem 1.2rem 1.2rem 1.2rem;backdrop-filter:blur(8px);">
+                <div class="stat-float" style="font-family:'Orbitron',Arial,sans-serif;font-size:2.8rem;color:var(--neon-purple);font-weight:900;text-align:center;letter-spacing:0.08em;">3</div>
+                <div style="color:var(--text-main);font-family:'Orbitron',Arial,sans-serif;font-size:1.2rem;text-align:center;margin-top:0.3rem;letter-spacing:0.12em;">Clubs</div>
+            </div>
+            <div class="hud-stats neon-pulse" style="position:relative;min-width:170px;background:var(--glass-bg);border-radius:2rem;box-shadow:0 0 16px var(--success);padding:2.2rem 1.2rem 1.2rem 1.2rem;backdrop-filter:blur(8px);">
+                <div class="stat-float" style="font-family:'Orbitron',Arial,sans-serif;font-size:2.8rem;color:var(--success);font-weight:900;text-align:center;letter-spacing:0.08em;">$18,000</div>
+                <div style="color:var(--text-main);font-family:'Orbitron',Arial,sans-serif;font-size:1.2rem;text-align:center;margin-top:0.3rem;letter-spacing:0.12em;">Total Prizes</div>
+            </div>
+        </section>
+
+
+
+
+    <!-- Featured Clubs -->
+    <section class="featured-clubs" id="clubs">
+        <h2>Featured Clubs</h2>
+        <div class="clubs-list" id="clubsList">
+            <!-- Dynamic club cards here -->
+        </div>
+        <div style="width:100%;display:flex;justify-content:flex-end;margin-top:0.7rem;">
+            <a href="#" class="see-all-clubs-link">See All Clubs &rarr;</a>
+        </div>
+    </section>
+
+        <!-- Top Players & Latest News Section -->
+        <section class="top-leaderboard-news-section">
+            <div class="top-leaderboard-news-container">
+                <!-- LEFT: Top Players Leaderboard -->
+                <div class="top-leaderboard-box">
+                    <h3 class="top-leaderboard-title">Top Players Leaderboard</h3>
+                    <div class="top-players-list">
+                        <div class="top-player-card rank-1">
+                            <div class="player-rank">1</div>
+                            <img class="player-avatar" src="https://ui-avatars.com/api/?name=Player+One&background=0A0F1F&color=00E0FF" alt="Player One">
+                            <div class="player-info">
+                                <div class="player-name">PlayerOne</div>
+                                <div class="player-club">Cyber Wolves</div>
+                            </div>
+                            <div class="player-points">1620</div>
+                        </div>
+                        <div class="top-player-card rank-2">
+                            <div class="player-rank">2</div>
+                            <img class="player-avatar" src="https://ui-avatars.com/api/?name=Gamer+X&background=0A0F1F&color=7B00FF" alt="GamerX">
+                            <div class="player-info">
+                                <div class="player-name">GamerX</div>
+                                <div class="player-club">Neon Knights</div>
+                            </div>
+                            <div class="player-points">1510</div>
+                        </div>
+                        <div class="top-player-card rank-3">
+                            <div class="player-rank">3</div>
+                            <img class="player-avatar" src="https://ui-avatars.com/api/?name=Pro+Star&background=0A0F1F&color=FF005C" alt="ProStar">
+                            <div class="player-info">
+                                <div class="player-name">ProStar</div>
+                                <div class="player-club">Pulse Squad</div>
+                            </div>
+                            <div class="player-points">1440</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT: Latest News -->
+                <div class="latest-news-box">
+                    <h3 class="latest-news-title">Latest News</h3>
+                    <div class="news-marquee-outer">
+                        <div class="news-marquee" id="newsMarquee">
+                            <div class="news-card">
+                                <div class="news-title">Khelbo Esports Cup Announced</div>
+                                <div class="news-desc">A new tournament with a $10,000 prize pool is coming soon!</div>
+                                <div class="news-date">27 Nov 2025</div>
+                            </div>
+                            <div class="news-card">
+                                <div class="news-title">Patch 1.2 Released</div>
+                                <div class="news-desc">Balance changes and new features for all players.</div>
+                                <div class="news-date">25 Nov 2025</div>
+                            </div>
+                            <div class="news-card">
+                                <div class="news-title">Club Registration Open</div>
+                                <div class="news-desc">Start your own club and compete for glory!</div>
+                                <div class="news-date">22 Nov 2025</div>
+                            </div>
+                            <div class="news-card">
+                                <div class="news-title">Weekly Highlights</div>
+                                <div class="news-desc">Catch up on the best plays and moments.</div>
+                                <div class="news-date">20 Nov 2025</div>
+                            </div>
+                            <div class="news-card">
+                                <div class="news-title">New Streamers Join</div>
+                                <div class="news-desc">Watch live as new talent enters the scene.</div>
+                                <div class="news-date">18 Nov 2025</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="see-all-news-link-bottom">See All News &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Latest Streams -->
+    <section class="latest-streams" id="streams">
+        <h2>Latest Streams</h2>
+        <div class="streams-list">
+            <div class="stream-placeholder">Stream 1 (Placeholder)</div>
+            <div class="stream-placeholder">Stream 2 (Placeholder)</div>
+            <div class="stream-placeholder">Stream 3 (Placeholder)</div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="about">
+        <div>About | Contact | Terms</div>
+        <div>&copy; 2025 KHELBO. All rights reserved.</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+<script>
+// Marquee vertical scroll loop for news
+document.addEventListener('DOMContentLoaded', function() {
+    const marquee = document.getElementById('newsMarquee');
+    if (marquee) {
+        // Duplicate news cards for seamless loop
+        marquee.innerHTML += marquee.innerHTML;
+    }
+});
+</script>
+</body>
+</html>
