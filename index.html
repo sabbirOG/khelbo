@@ -8,12 +8,20 @@
     <!-- Orbitron & Inter fonts for esports style -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">KHELBO</div>
-        <ul class="nav-links">
+        <div class="logo-hamburger-group">
+            <div class="logo">KHELBO.gg</div>
+            <button class="hamburger" id="hamburgerMenu" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+        <ul class="nav-links" id="navLinks">
             <li><a href="#">Home</a></li>
             <li><a href="#tournaments">Tournaments</a></li>
             <li><a href="#clubs">Clubs</a></li>
@@ -36,10 +44,13 @@
 
         <!-- Featured Tournaments Carousel -->
         <section class="featured-tournaments" id="tournaments">
-                <h2>Featured Tournaments</h2>
-                <div class="carousel" id="tournamentCarousel">
-                        <!-- Dynamic tournament cards here -->
-                </div>
+            <h2>Featured Tournaments</h2>
+            <div class="carousel" id="tournamentCarousel">
+                <!-- Dynamic tournament cards here -->
+            </div>
+            <div style="width:100%;margin-top:1.2rem;display:flex;justify-content:center;">
+                <a href="#" class="see-all-tournaments-link">See All Tournaments &rarr;</a>
+            </div>
         </section>
 
         <!-- Animated Stats/HUD Section -->
@@ -67,7 +78,7 @@
         <div class="clubs-list" id="clubsList">
             <!-- Dynamic club cards here -->
         </div>
-        <div style="width:100%;display:flex;justify-content:flex-end;margin-top:0.7rem;">
+        <div style="width:100%;margin-top:1.2rem;display:flex;justify-content:center;">
             <a href="#" class="see-all-clubs-link">See All Clubs &rarr;</a>
         </div>
     </section>
@@ -176,7 +187,8 @@
     <!-- Footer -->
     <footer class="footer" id="about">
         <div>About | Contact | Terms</div>
-        <div>&copy; 2025 KHELBO. All rights reserved.</div>
+        <div>&copy; 2025 <a href="https://github.com/sabbirOG/khelbo" target="_blank" style="color:var(--neon-blue);text-decoration:none;font-weight:700;">KHELBO</a>. All rights reserved.<br>
+        by <a href="https://github.com/sabbirOG" target="_blank" style="color:var(--neon-purple);text-decoration:none;font-weight:700;">sabbirOG</a></div>
     </footer>
 
     <script src="script.js"></script>
