@@ -1,3 +1,43 @@
+.password-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.password-wrapper input[type="password"],
+.password-wrapper input[type="text"] {
+    width: 100%;
+    padding-right: 2.5rem;
+}
+.toggle-password {
+    position: absolute;
+    right: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0.2rem;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggle-text {
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 1.01em;
+    font-weight: 700;
+    color: var(--neon-blue);
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 8px var(--neon-blue);
+    transition: color 0.18s, text-shadow 0.18s;
+    user-select: none;
+}
+.toggle-password.active .toggle-text {
+    color: var(--neon-purple);
+    text-shadow: 0 0 8px var(--neon-purple);
+}
 /* Futuristic Neon Logo and Tagline */
 .futuristic-logo {
     display: flex;
@@ -180,7 +220,8 @@ body::before {
     gap: 1rem;
     width: 100%;
 }
-.auth-form h2 {
+/* Auth headings use Orbitron */
+.auth-title {
     color: var(--neon-blue);
     margin-bottom: 0.5rem;
     text-align: center;
@@ -190,7 +231,8 @@ body::before {
     letter-spacing: 0.12em;
     text-shadow: 0 0 12px var(--neon-blue);
 }
-.auth-form input {
+/* Auth inputs use Inter */
+.auth-input {
     padding: 0.7rem 1rem;
     border-radius: var(--radius-xl);
     border: 2px solid rgba(0,224,255,0.18);
@@ -202,11 +244,16 @@ body::before {
     box-shadow: 0 0 8px 0 var(--neon-blue)22;
     font-family: 'Inter', Arial, sans-serif;
 }
+.auth-input:focus {
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 16px var(--neon-blue);
+}
 .auth-form input:focus {
     border: 2px solid var(--neon-blue);
     box-shadow: 0 0 16px var(--neon-blue);
 }
-.auth-form button[type="submit"] {
+/* Auth buttons use Orbitron */
+.auth-btn {
     background: linear-gradient(90deg, var(--neon-blue) 0%, var(--neon-purple) 100%);
     color: #fff;
     border: none;
@@ -221,7 +268,7 @@ body::before {
     box-shadow: 0 0 8px var(--neon-blue);
     letter-spacing: 0.12em;
 }
-.auth-form button[type="submit"]:hover {
+.auth-btn:hover {
     background: linear-gradient(90deg, var(--neon-purple) 0%, var(--neon-blue) 100%);
     color: var(--neon-blue);
     box-shadow: 0 0 16px var(--neon-purple);
