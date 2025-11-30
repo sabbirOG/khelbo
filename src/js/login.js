@@ -28,11 +28,41 @@ document.getElementById('showSignup').onclick = function() {
     document.getElementById('showLogin').classList.remove('active');
 };
 
+
+// Neon alert logic
+function showNeonAlert(message, type = 'error', duration = 2200) {
+    const alertBox = document.getElementById('neon-alert');
+    alertBox.textContent = message;
+    alertBox.className = `neon-alert show ${type}`;
+    alertBox.style.display = '';
+    setTimeout(() => {
+        alertBox.classList.remove('show');
+        setTimeout(() => { alertBox.style.display = 'none'; }, 400);
+    }, duration);
+}
+
 document.getElementById('loginForm').onsubmit = function(e) {
     e.preventDefault();
-    alert('Login functionality coming soon!');
+    // Example: Validate input (simulate error)
+    const inputs = this.querySelectorAll('input');
+    let valid = true;
+    inputs.forEach(inp => { if (!inp.value.trim()) valid = false; });
+    if (!valid) {
+        showNeonAlert('Please fill in all fields.', 'error');
+        return;
+    }
+    showNeonAlert('Login functionality coming soon!', 'success');
 };
+
 document.getElementById('signupForm').onsubmit = function(e) {
     e.preventDefault();
-    alert('Signup functionality coming soon!');
+    // Example: Validate input (simulate error)
+    const inputs = this.querySelectorAll('input');
+    let valid = true;
+    inputs.forEach(inp => { if (!inp.value.trim()) valid = false; });
+    if (!valid) {
+        showNeonAlert('Please fill in all fields.', 'error');
+        return;
+    }
+    showNeonAlert('Signup functionality coming soon!', 'success');
 };

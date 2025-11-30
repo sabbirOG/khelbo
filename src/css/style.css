@@ -646,23 +646,27 @@ body::before {
     position: relative;
 }
 .login-btn {
-    background: linear-gradient(90deg, var(--neon-blue) 10%, var(--neon-purple) 90%);
-    color: #fff !important;
-    box-shadow: 0 0 8px var(--neon-blue);
+    background: transparent;
+    color: var(--neon-blue) !important;
+    border: 2px solid var(--neon-blue);
     border-radius: var(--radius-xl);
     padding: 0.3em 1.2em;
     margin-left: 1.2em;
     font-weight: 800;
-    text-shadow: 0 0 8px var(--neon-blue);
-    border: none;
+    font-family: 'Orbitron', Arial, sans-serif;
+    text-shadow: none;
+    box-shadow: none;
     outline: none;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    transition: background 0.18s, color 0.18s, border 0.18s, transform 0.18s;
 }
-.login-btn:hover {
-    background: linear-gradient(90deg, var(--neon-purple) 10%, var(--neon-blue) 90%);
+.login-btn:hover,
+.login-btn:active,
+.login-btn:focus {
+    background: transparent;
     color: var(--neon-blue) !important;
-    box-shadow: 0 0 16px var(--neon-purple);
-    transform: scale(1.06);
+    border-color: var(--neon-blue);
+    transform: none;
+    outline: none;
 }
 .nav-links li a:hover {
     color: var(--neon-blue);
@@ -758,13 +762,13 @@ body::before {
     box-shadow: 0 2px 24px 0 #000a;
 }
 .featured-tournaments h2 {
-    color: var(--neon-purple);
+    color: #b0b4be;
     margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'Orbitron', Arial, sans-serif;
     letter-spacing: 0.14em;
     font-size: 2rem;
-    text-shadow: 0 0 8px var(--neon-purple);
+    text-shadow: 0 0 8px #b0b4be;
 }
 .carousel {
     display: flex;
@@ -838,13 +842,13 @@ body::before {
     background: var(--primary-bg);
 }
 .featured-clubs h2 {
-    color: var(--neon-blue);
+    color: #b0b4be;
     margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'Orbitron', Arial, sans-serif;
     letter-spacing: 0.14em;
     font-size: 2rem;
-    text-shadow: 0 0 8px var(--neon-blue);
+    text-shadow: 0 0 8px #b0b4be;
 }
 .clubs-list {
     display: flex;
@@ -916,13 +920,13 @@ body::before {
     background: var(--secondary-bg);
 }
 .latest-streams h2 {
-    color: var(--neon-purple);
+    color: #b0b4be;
     margin-bottom: 1.5rem;
     text-align: center;
     font-family: 'Orbitron', Arial, sans-serif;
     letter-spacing: 0.14em;
     font-size: 2rem;
-    text-shadow: 0 0 8px var(--neon-purple);
+    text-shadow: 0 0 8px #b0b4be;
 }
 .streams-list {
     display: flex;

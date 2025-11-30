@@ -1,3 +1,77 @@
+.back-home-link:hover,
+.back-home-link:active {
+    color: #b0b4be;
+    text-decoration: none;
+    background: none;
+    box-shadow: none;
+}
+/* Neon Back to Home link */
+.back-home-link {
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--neon-blue);
+    text-decoration: none;
+    letter-spacing: 0.09em;
+    text-shadow: 0 0 8px var(--neon-blue), 0 0 12px var(--neon-purple);
+    background: rgba(10,15,31,0.55);
+    border-radius: 1.2rem;
+    padding: 0.45rem 1.2rem 0.45rem 1.1rem;
+    box-shadow: 0 0 12px 2px var(--neon-blue)33;
+    transition: color 0.18s, background 0.18s, box-shadow 0.18s;
+    position: relative;
+    z-index: 10;
+}
+
+/* Neon animated alert styles */
+.neon-alert {
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%) scale(0.95);
+    min-width: 220px;
+    max-width: 90vw;
+    padding: 0.85rem 1.5rem;
+    border-radius: 1.2rem;
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-align: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: 0 0 18px 2px var(--neon-blue), 0 0 24px 4px var(--neon-purple);
+    background: linear-gradient(90deg, rgba(0,224,255,0.85) 0%, rgba(123,0,255,0.85) 100%);
+    color: #fff;
+    text-shadow: 0 0 8px var(--neon-blue), 0 0 12px var(--neon-purple);
+    transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
+    animation: neonAlertPop 1.2s cubic-bezier(.4,0,.2,1);
+}
+.neon-alert.show {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.04);
+    pointer-events: auto;
+}
+.neon-alert.success {
+    background: linear-gradient(90deg, rgba(0,255,180,0.92) 0%, rgba(0,224,255,0.92) 100%);
+    box-shadow: 0 0 18px 2px var(--success), 0 0 24px 4px var(--neon-blue);
+    color: #fff;
+    text-shadow: 0 0 8px var(--success), 0 0 12px var(--neon-blue);
+}
+.neon-alert.error {
+    background: linear-gradient(90deg, rgba(255,0,120,0.92) 0%, rgba(123,0,255,0.92) 100%);
+    box-shadow: 0 0 18px 2px var(--danger), 0 0 24px 4px var(--neon-purple);
+    color: #fff;
+    text-shadow: 0 0 8px var(--danger), 0 0 12px var(--neon-purple);
+}
+@keyframes neonAlertPop {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.8); }
+    60% { opacity: 1; transform: translateX(-50%) scale(1.08); }
+    100% { opacity: 1; transform: translateX(-50%) scale(1.04); }
+}
 .password-wrapper {
     position: relative;
     width: 100%;
