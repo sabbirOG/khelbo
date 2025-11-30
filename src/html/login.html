@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Signup - KHELBO</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="futuristic-logo">
+            <span class="neon-glow">KHELBO</span>
+            <div class="tagline">The Ultimate Esports Platform</div>
+        </div>
+        <div class="glow-divider">
+            <span class="divider-dot"></span>
+        </div>
+        <div class="form-toggle">
+            <button id="showLogin" class="active">Login</button>
+            <button id="showSignup">Sign Up</button>
+        </div>
+        <form id="loginForm" class="auth-form">
+            <h2>Login</h2>
+            <input type="text" placeholder="Username or Email" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <form id="signupForm" class="auth-form" style="display:none;">
+            <h2>Sign Up</h2>
+            <input type="text" placeholder="Username" required>
+            <input type="email" placeholder="Email" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script src="../js/login.js"></script>
+    <script src="../js/divider-interactive.js"></script>
+</body>
+</html>

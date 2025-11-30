@@ -645,6 +645,25 @@ body::before {
     transition: color 0.2s, box-shadow 0.2s, background 0.2s, text-shadow 0.2s, transform 0.2s;
     position: relative;
 }
+.login-btn {
+    background: linear-gradient(90deg, var(--neon-blue) 10%, var(--neon-purple) 90%);
+    color: #fff !important;
+    box-shadow: 0 0 8px var(--neon-blue);
+    border-radius: var(--radius-xl);
+    padding: 0.3em 1.2em;
+    margin-left: 1.2em;
+    font-weight: 800;
+    text-shadow: 0 0 8px var(--neon-blue);
+    border: none;
+    outline: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.login-btn:hover {
+    background: linear-gradient(90deg, var(--neon-purple) 10%, var(--neon-blue) 90%);
+    color: var(--neon-blue) !important;
+    box-shadow: 0 0 16px var(--neon-purple);
+    transform: scale(1.06);
+}
 .nav-links li a:hover {
     color: var(--neon-blue);
     background: rgba(0,224,255,0.08);
