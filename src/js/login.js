@@ -51,7 +51,11 @@ document.getElementById('loginForm').onsubmit = function(e) {
         showNeonAlert('Please fill in all fields.', 'error');
         return;
     }
-    showNeonAlert('Login functionality coming soon!', 'success');
+    // Simulate successful login and redirect to home (dashboard removed)
+    showNeonAlert('Login successful! Redirecting...', 'success');
+    setTimeout(function() {
+        window.location.href = '../../index.html';
+    }, 1200);
 };
 
 document.getElementById('signupForm').onsubmit = function(e) {
@@ -64,5 +68,9 @@ document.getElementById('signupForm').onsubmit = function(e) {
         showNeonAlert('Please fill in all fields.', 'error');
         return;
     }
-    showNeonAlert('Signup functionality coming soon!', 'success');
+    // Simulate successful signup and redirect to home (dashboard removed)
+    showNeonAlert('Signup successful! Redirecting...', 'success');
+    setTimeout(function() {
+        window.location.href = '../../index.html';
+    }, 1200);
 };

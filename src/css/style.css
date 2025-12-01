@@ -108,9 +108,12 @@
 }
 .top-player-card .player-club {
     font-size: 0.95rem;
-    color: var(--neon-purple);
     font-family: 'Inter', Arial, sans-serif;
-    opacity: 0.8;
+    color: #b0b4be;
+    font-weight: 700;
+    text-shadow: none;
+    letter-spacing: 0.09em;
+    opacity: 1;
 }
 .top-player-card .player-points {
     margin-left: auto;
@@ -908,11 +911,11 @@ body::before {
 .club-name {
     font-family: 'Orbitron', Arial, sans-serif;
     font-weight: 700;
-    color: var(--neon-purple);
+    color: #b0b4be;
     margin-top: 0.5rem;
     letter-spacing: 0.12em;
     font-size: 1.1rem;
-    text-shadow: 0 0 8px var(--neon-purple);
+    text-shadow: none;
 }
 
 
