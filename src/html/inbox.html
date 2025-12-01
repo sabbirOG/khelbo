@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/inbox.css">
+    <link rel="stylesheet" href="../css/inbox-mb.css" media="only screen and (max-width: 900px)">
+</head>
+<body>
+    <div class="inbox-container">
+        <header class="inbox-header">
+            <h1><span class="inbox-icon"></span> Inbox</h1>
+        </header>
+        <div style="height: 1.5rem;"></div>
+        </header>
+        <main class="inbox-main">
+            <aside class="inbox-sidebar">
+                <a href="dashboard.html#profile" style="display:inline-block;margin:0 0 1.5rem 0.2rem;font-family:'Inter',sans-serif;font-size:1rem;color:var(--neon-blue,#3af0ff);text-decoration:none;letter-spacing:0.03em;">&larr; Back</a>
+                <nav class="inbox-tabs" role="tablist">
+                    <button class="inbox-tab active" id="tab-messages" data-tab="messages" aria-selected="true" aria-controls="section-messages" tabindex="0"><span class="inbox-tab-icon" style="background:url('../img/message-icon.svg') no-repeat center/contain;"></span>Messages</button>
+                    <button class="inbox-tab" id="tab-notifications" data-tab="notifications" aria-selected="false" aria-controls="section-notifications" tabindex="-1"><span class="inbox-tab-icon" style="background:url('../img/notification-icon.svg') no-repeat center/contain;"></span>Notifications</button>
+                    <button class="inbox-tab" id="tab-activity" data-tab="activity" aria-selected="false" aria-controls="section-activity" tabindex="-1"><span class="inbox-tab-icon" style="background:url('../img/activity-icon.svg') no-repeat center/contain;"></span>Activity</button>
+                </nav>
+                <div class="inbox-sidebar-search">
+                    <input type="text" id="inboxSearch" placeholder="Search..." autocomplete="off">
+                </div>
+            </aside>
+            <section class="inbox-content">
+                <!-- Messages Section -->
+                <section class="inbox-section active" id="section-messages" role="tabpanel" aria-labelledby="tab-messages">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem;">
+                        <span style="font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em;">Messages</span>
+                        <button id="markAllReadBtn" class="inbox-chat-send-btn" style="padding:0.4rem 1.1rem; font-size:1rem;">Mark all as read</button>
+                    </div>
+                    <ul class="inbox-messages-list" id="messagesList">
+                        <!-- Messages will be rendered dynamically by JS -->
+                    </ul>
+                    <div class="inbox-chat-box" id="chatBox" style="display:none; position:relative;">
+                        <button type="button" id="closeChatBtn" title="Close chat" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.5rem;color:var(--text-muted);cursor:pointer;z-index:2;">&times;</button>
+                        <div class="inbox-chat-thread" id="chatThread"></div>
+                        <form class="inbox-chat-input-row" id="chatInputRow">
+                            <input type="text" class="inbox-chat-input" id="chatInput" placeholder="Type a message..." autocomplete="off">
+                            <button type="submit" class="inbox-chat-send-btn">Send</button>
+                        </form>
+                    </div>
+                </section>
+                <!-- Notifications Section -->
+                <section class="inbox-section" id="section-notifications" role="tabpanel" aria-labelledby="tab-notifications">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem;">
+                        <span style="font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em;">Notifications</span>
+                        <button id="markAllNotificationsReadBtn" class="inbox-chat-send-btn" style="padding:0.4rem 1.1rem; font-size:1rem;">Mark all as read</button>
+                    </div>
+                    <ul class="inbox-feed-list" id="notificationsList">
+                        <!-- Notifications will be rendered dynamically by JS -->
+                    </ul>
+                </section>
+                <!-- Activity Section -->
+                <section class="inbox-section" id="section-activity" role="tabpanel" aria-labelledby="tab-activity">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem;">
+                        <span style="font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em;">Recent Activity</span>
+                        <button id="markAllActivityReadBtn" class="inbox-chat-send-btn" style="padding:0.4rem 1.1rem; font-size:1rem;">Mark all as read</button>
+                    </div>
+                    <ul class="inbox-feed-list" id="activityList">
+                        <!-- Activity feed will be rendered dynamically by JS -->
+                    </ul>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="../js/inbox.js"></script>
+</body>
+</html>

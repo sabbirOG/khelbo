@@ -70,9 +70,11 @@
 	background: transparent;
 	border-radius: 0;
 	padding: 0.4rem 0.7rem 0.4rem 0.7rem;
-	font-weight: 600;
-	font-family: 'Inter', Arial, sans-serif;
-	letter-spacing: 0.03em;
+	font-family: 'Orbitron', Arial, sans-serif;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 1.05rem;
 	transition: color 0.2s, border-bottom 0.18s;
 	box-shadow: none;
 	text-decoration: none;

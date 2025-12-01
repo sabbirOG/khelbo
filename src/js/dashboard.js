@@ -39,7 +39,19 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 	});
-	// Optionally, show profile by default on load
-	showProfileContent(false);
+	// Show profile if hash is #profile, else hide by default
+	if (window.location.hash === '#profile') {
+		showProfileContent(true);
+		// Set active class on profile nav item
+		navLinks.forEach(l => {
+			if (l.getAttribute('href') === '#profile') {
+				l.parentElement.classList.add('active');
+			} else {
+				l.parentElement.classList.remove('active');
+			}
+		});
+	} else {
+		showProfileContent(false);
+	}
 });
 

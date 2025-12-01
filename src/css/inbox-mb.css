@@ -1,0 +1,23 @@
+@media (max-width: 900px) {
+    .inbox-container {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        gap: 1.2rem;
+    }
+    .inbox-header h1 {
+        font-size: 1.2rem;
+    }
+    .inbox-main {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    .inbox-detail-section {
+        padding: 1rem 0.7rem;
+        min-height: 120px;
+    }
+    .inbox-list-section {
+        flex: 1 1 100%;
+    }
+    .inbox-list .inbox-message {
+        padding: 0.7rem 0.7rem;
+    }
+}
