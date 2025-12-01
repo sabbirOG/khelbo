@@ -1,3 +1,12 @@
+// Redirect to inbox when notification bell is clicked
+document.addEventListener('DOMContentLoaded', function() {
+	var notifyBtn = document.getElementById('dashboard-notify');
+	if (notifyBtn) {
+		notifyBtn.addEventListener('click', function() {
+			window.location.href = '../html/inbox.html';
+		});
+	}
+});
 
 // Redirect to homepage on logout click
 document.addEventListener('DOMContentLoaded', function() {

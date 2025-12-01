@@ -1,3 +1,58 @@
+@keyframes bell-glow-pulse {
+	0% {
+		filter: drop-shadow(0 0 5px var(--neon-blue, #0ff)) drop-shadow(0 0 8px var(--neon-blue, #0ff4));
+	}
+	50% {
+		filter: drop-shadow(0 0 8px var(--neon-blue, #0ff4)) drop-shadow(0 0 14px var(--neon-blue, #0ff2));
+	}
+	100% {
+		filter: drop-shadow(0 0 5px var(--neon-blue, #0ff)) drop-shadow(0 0 8px var(--neon-blue, #0ff4));
+	}
+}
+.notify-btn .notify-icon svg {
+	filter: drop-shadow(0 0 5px var(--neon-blue, #0ff)) drop-shadow(0 0 8px var(--neon-blue, #0ff4));
+	transition: filter 0.2s;
+	animation: bell-glow-pulse 2.2s infinite;
+}
+.notify-btn:hover .notify-icon svg,
+.notify-btn:focus .notify-icon svg {
+	filter: drop-shadow(0 0 12px var(--neon-blue, #0ff)) drop-shadow(0 0 20px var(--neon-blue, #0ff8));
+	animation: none;
+}
+/* Notification Bell Glow */
+.notify-btn .notify-icon svg {
+	filter: drop-shadow(0 0 6px var(--neon-blue, #0ff)) drop-shadow(0 0 12px var(--neon-blue, #0ff6));
+	transition: filter 0.2s;
+}
+.notify-btn:hover .notify-icon svg,
+.notify-btn:focus .notify-icon svg {
+	filter: drop-shadow(0 0 10px var(--neon-blue, #0ff)) drop-shadow(0 0 18px var(--neon-blue, #0ff8));
+}
+/* Recent Activity Section Header - Cyan Text */
+.dashboard-card.recent-activity h3 {
+	color: var(--neon-blue, #0ff);
+	text-shadow: 0 0 8px var(--neon-blue, #0ff6);
+}
+/* Dashboard Section SVG Icon Glow */
+.dashboard-card h3 svg,
+.dashboard-card h3 span > svg {
+	filter: drop-shadow(0 0 6px var(--neon-blue, #0ff)) drop-shadow(0 0 12px var(--neon-blue, #0ff6));
+	transition: filter 0.2s;
+}
+.dashboard-card:hover h3 svg,
+.dashboard-card:hover h3 span > svg {
+	filter: drop-shadow(0 0 10px var(--neon-blue, #0ff)) drop-shadow(0 0 18px var(--neon-blue, #0ff8));
+}
+/* Navbar SVG Icon Glow */
+.dashboard-vertical-navbar svg {
+	filter: none;
+	transition: none;
+}
+.dashboard-vertical-navbar li.active svg,
+.dashboard-vertical-navbar a:hover svg,
+.dashboard-vertical-navbar a:focus svg {
+	filter: none;
+}
 .dashboard-profile-content .dashboard-quicklinks {
 	display: flex;
 	gap: 1.2rem;
@@ -42,18 +97,19 @@
 
 /* Redesigned Your Stats Section */
 .dashboard-card.dashboard-stats {
-	background: var(--glass-bg, #181c24ee);
-	border-radius: 1.3rem;
-	box-shadow: 0 2px 24px 0 var(--primary-shadow, #0ff2), 0 1px 12px #0008;
-	padding: 2rem 1.5rem 1.5rem 1.5rem;
-	color: var(--text-main, #eaf6ff);
+	background: var(--glass-bg);
+	border-radius: 1.5rem;
+	box-shadow: 0 0 20px 0 var(--neon-blue), 0 1px 12px #0008;
+	padding: 1.5rem 1.2rem;
+	color: var(--text-main);
 	min-width: 260px;
-	max-width: 480px;
+	flex: 1 1 320px;
 	margin-bottom: 1.2rem;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 1.2rem;
+	gap: 1rem;
+	max-width: 480px;
 	transition: box-shadow 0.25s;
 }
 .dashboard-card.dashboard-stats h3 {
@@ -229,12 +285,12 @@
 }
 .dashboard-card.recent-activity h3 {
 	font-family: 'Orbitron', Arial, sans-serif;
-	color: var(--neon-purple);
+	color: var(--neon-blue, #0ff) !important;
 	font-size: 1.25rem;
 	font-weight: 800;
 	margin-bottom: 1.1rem;
 	letter-spacing: 0.09em;
-	text-shadow: 0 0 8px var(--neon-purple);
+	text-shadow: 0 0 8px var(--neon-blue, #0ff6);
 	display: flex;
 	align-items: center;
 	gap: 0.6rem;
