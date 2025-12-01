@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Orbitron & Inter fonts for esports style -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dash-mb.css" media="only screen and (max-width: 900px)">
+</head>
+<body>
+    <div class="dashboard-split-layout">
+        <nav class="dashboard-vertical-navbar">
+            <ul>
+                <li class="active"><a href="#tournaments"><span>🏆</span> Tournaments</a></li>
+                <li><a href="#clubs"><span>👥</span> Clubs</a></li>
+                <li><a href="#streams"><span>📺</span> Streams</a></li>
+                <li><a href="#profile"><span>👤</span> Profile</a></li>
+                <li><a href="#logout" class="logout-btn"><span>🚪</span> Logout</a></li>
+            </ul>
+        </nav>
+        <main class="dashboard-main-content">
+            <section class="dashboard-profile-content" id="dashboardProfileContent" style="display:none;">
+                <div class="dashboard-user-info">
+                    <div class="user-avatar-block">
+                        <img id="dashboard-avatar" src="https://api.dicebear.com/7.x/pixel-art/svg?seed=Player" alt="User Avatar">
+                    </div>
+                    <div class="user-greeting">Welcome back, <span id="dashboard-username">Player!</span></div>
+                    <button id="dashboard-notify" class="notify-btn" title="Notifications">
+                        <span class="notify-icon">🔔</span>
+                        <span id="notify-dot" class="notify-dot"></span>
+                    </button>
+                </div>
+                <section class="dashboard-quicklinks">
+                    <a href="#tournaments">Tournaments</a>
+                    <a href="#clubs">Clubs</a>
+                    <a href="#streams">Streams</a>
+                    <a href="#profile">Profile</a>
+                </section>
+                <section class="dashboard-cards">
+                    <div class="dashboard-card upcoming-tournaments">
+                        <h3><span>🏆</span> Upcoming Tournaments</h3>
+                        <ul>
+                            <li>
+                                <span class="tournament-name"><span class="tournament-dot"></span>Winter Cup 2025</span>
+                                <span class="tournament-date">Dec 10</span>
+                            </li>
+                            <li>
+                                <span class="tournament-name"><span class="tournament-dot"></span>Pro League Finals</span>
+                                <span class="tournament-date">Dec 18</span>
+                            </li>
+                            <li>
+                                <span class="tournament-name"><span class="tournament-dot"></span>Community Clash</span>
+                                <span class="tournament-date">Jan 5</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-card recent-activity">
+                        <h3><span>📝</span> Recent Activity</h3>
+                        <ul>
+                            <li><span class="activity-icon join"></span><span class="activity-label">Joined</span> <span class="activity-detail">"Winter Cup 2025" tournament</span></li>
+                            <li><span class="activity-icon club"></span><span class="activity-label">Created</span> <span class="activity-detail">club "Neon Gamers"</span></li>
+                            <li><span class="activity-icon stream"></span><span class="activity-label">Watched</span> <span class="activity-detail">"Pro League" stream</span></li>
+                        </ul>
+                    </div>
+                    <div class="dashboard-card dashboard-stats">
+                        <h3><span>📊</span> Your Stats</h3>
+                        <div class="stats-list">
+                            <div class="stat-item stat-tournaments">
+                                <div class="stat-left"><span class="stat-icon">🏆</span> Tournaments Joined</div>
+                                <div class="stat-value">3</div>
+                            </div>
+                            <div class="stat-separator"></div>
+                            <div class="stat-item stat-clubs">
+                                <div class="stat-left"><span class="stat-icon" style="padding:0;"><svg width="1.6em" height="1.6em" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><path d="M16 3L28 7V15C28 22 22 27 16 29C10 27 4 22 4 15V7L16 3Z" fill="#4A7CB8" stroke="#2C4A7A" stroke-width="2"/><path d="M12 17C12 15.3431 13.3431 14 15 14H17C18.6569 14 20 15.3431 20 17" stroke="#1B2E4A" stroke-width="2" stroke-linecap="round"/><circle cx="12.5" cy="13.5" r="1.5" fill="#2C4A7A"/><circle cx="19.5" cy="13.5" r="1.5" fill="#2C4A7A"/></svg></span> Clubs Created</div>
+                                <div class="stat-value">1</div>
+                            </div>
+                            <div class="stat-separator"></div>
+                            <div class="stat-item stat-streams">
+                                <div class="stat-left"><span class="stat-icon">📺</span> Streams Watched</div>
+                                <div class="stat-value">5</div>
+                            </div>
+                            <div class="stat-separator"></div>
+                            <div class="stat-item stat-points">
+                                <div class="stat-left"><span class="stat-icon" style="padding:0;"><svg width="1.6em" height="1.6em" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;"><circle cx="16" cy="16" r="14" fill="#3ec6ff" stroke="#1b4a7a" stroke-width="2"/><polygon points="16,7 19,17 13,17" fill="#fff" stroke="#1b4a7a" stroke-width="1.2"/><polygon points="16,25 13,15 19,15" fill="#fff" stroke="#1b4a7a" stroke-width="1.2"/></svg></span> XP</div>
+                                <div class="stat-value">1200</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+
+/* Mobile Navbar Styles */
+.navbar {
+	flex-direction: column;
+	align-items: stretch;
+	padding: 1rem 1.2rem;
+}
+.navbar-logo {
+	margin-bottom: 0.7rem;
+	text-align: center;
+}
+.navbar-links {
+	flex-direction: column;
+	gap: 1.1rem;
+	margin-top: 0.7rem;
+	align-items: stretch;
+}
+.navbar-links a {
+	padding: 0.7rem 1.2rem;
+	font-size: 1.12rem;
+	text-align: center;
+}
+

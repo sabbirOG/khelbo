@@ -51,10 +51,10 @@ document.getElementById('loginForm').onsubmit = function(e) {
         showNeonAlert('Please fill in all fields.', 'error');
         return;
     }
-    // Simulate successful login and redirect to home (dashboard removed)
+    // Simulate successful login and redirect to dashboard
     showNeonAlert('Login successful! Redirecting...', 'success');
     setTimeout(function() {
-        window.location.href = '../../index.html';
+        window.location.href = 'dashboard.html';
     }, 1200);
 };
 
@@ -68,9 +68,9 @@ document.getElementById('signupForm').onsubmit = function(e) {
         showNeonAlert('Please fill in all fields.', 'error');
         return;
     }
-    // Simulate successful signup and redirect to home (dashboard removed)
+    // Simulate successful signup and redirect to dashboard
     showNeonAlert('Signup successful! Redirecting...', 'success');
     setTimeout(function() {
-        window.location.href = '../../index.html';
+        window.location.href = 'dashboard.html';
     }, 1200);
 };
