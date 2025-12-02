@@ -1,3 +1,17 @@
+// --- Sidebar Expandable Games Category ---
+document.addEventListener('DOMContentLoaded', function() {
+  const gamesCategory = document.getElementById('games-category');
+  if (gamesCategory) {
+    gamesCategory.addEventListener('click', function(e) {
+      // Prevent toggling when clicking a subcategory
+      if (e.target !== gamesCategory) return;
+      const sub = gamesCategory.querySelector('.games-subcategories');
+      if (sub) {
+        sub.style.display = (sub.style.display === 'none' || sub.style.display === '') ? 'block' : 'none';
+      }
+    });
+  }
+});
   // --- Basic Pagination for Live Streams Grid ---
   const streamsPerPage = 2;
   const liveStreams = [
@@ -78,7 +92,7 @@
           <div class="stream-thumb-container" style="position:relative;">
             ${stream.video ? `<iframe class='stream-thumb' src='${stream.video}' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen style='width:100%;height:100%;aspect-ratio:16/9;border-radius:10px;'></iframe>` : `<img class='stream-thumb' src='${stream.thumb}' alt='Stream Thumbnail'>`}
             ${stream.live ? `<div style='position:absolute;top:10px;left:10px;background:#ff0000;color:#fff;font-weight:900;font-size:1em;padding:0.18em 0.9em 0.18em 0.9em;border-radius:3px;letter-spacing:1px;line-height:1;box-shadow:none;text-shadow:none;display:inline-block;'>LIVE</div>` : ''}
-            <div class="viewer-count" style="position:absolute;bottom:10px;right:10px;">${stream.viewers}</div>
+            <div class="viewer-count" style="position:absolute;bottom:10px;right:10px;color:#ff0000;font-weight:900;font-size:1em;background:#10131aee;padding:0.2rem 0.7rem;border-radius:7px;">${stream.viewers}</div>
           </div>
           <div class="stream-card-info">
             <img class="streamer-avatar" src="${stream.avatar}" alt="Streamer Avatar">
@@ -156,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <div class="featured-card">
             <div class="featured-video-container">
               <iframe class="featured-video-thumb" id="ytplayer-${idx}" src="${stream.videoUrl.replace('embed/', 'embed/').replace('?', '?mute=1&')}" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              <div class="live-badge">${stream.duration}</div>
+              <div style='position:absolute;top:10px;left:10px;background:#ff0000;color:#fff;font-weight:900;font-size:1em;padding:0.18em 0.9em 0.18em 0.9em;border-radius:3px;letter-spacing:1px;line-height:1;box-shadow:none;text-shadow:none;display:inline-block;'>${stream.duration}</div>
             </div>
             <div class="featured-card-info">
               <img class="streamer-avatar" src="${stream.avatar}" alt="Streamer Avatar">

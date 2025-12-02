@@ -25,6 +25,11 @@
   align-items: stretch;
   flex-wrap: nowrap;
   overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.featured-cards-row::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .featured-card {
   background: linear-gradient(120deg, #181c25 80%, #23273a 100%);
@@ -269,26 +274,31 @@ body {
   display: flex;
   align-items: center;
   background: #151924;
-  border-radius: 8px;
-  padding: 0.2rem 0.7rem;
+  border-radius: 12px;
+  padding: 0.3rem 1.5rem 0.3rem 1.5rem;
   border: 1px solid #23273a;
+  box-shadow: none;
+  transition: box-shadow 0.2s, border 0.2s;
 }
 .stream-search-bar input {
   background: transparent;
   border: none;
   color: #eaf6fb;
-  font-size: 1rem;
+  font-size: 1.08rem;
   outline: none;
-  padding: 0.5rem 0.3rem;
-  width: 180px;
+  padding: 0.6rem 0.5rem 0.6rem 0.2rem;
+  width: 300px;
+  transition: color 0.2s;
 }
-.stream-search-bar button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 0.3rem;
+.stream-search-bar input:focus {
+  color: #eaf6fb;
+}
+}
+.search-icon {
   display: flex;
   align-items: center;
+  margin-left: 0.3rem;
+  color: #eaf6fb;
 }
 
 .stream-page-container {
@@ -311,6 +321,13 @@ body {
   gap: 2rem;
   min-width: 200px;
   min-height: 600px;
+  max-height: 700px;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.stream-sidebar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .sidebar-section h3 {
   color: #00eaff;
