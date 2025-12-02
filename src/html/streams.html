@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streams</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/stream.css">
+    <link rel="stylesheet" href="../css/streams-mb.css" media="only screen and (max-width: 900px)">
+</head>
+<body>
+        <!--
+            Khelbo.gg Stream Page
+            Inspired by YouTube, Twitch, and modern streaming platforms
+            Theme: Dark, modern, minimal, tech-style (matches dashboard)
+        -->
+        <!-- Header / Navbar (reuse dashboard style) -->
+        <header class="khelbo-header">
+            <div class="logo">KHELBO.GG</div>
+            <nav class="main-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="streams.html" class="active">Streams</a>
+                <a href="inbox.html">Inbox</a>
+                <a href="login.html">Login</a>
+            </nav>
+            <div class="stream-search-bar">
+                <input type="text" placeholder="Search streams, games, or creators...">
+                <button title="Search"><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="9" cy="9" r="7" stroke="#00eaff" stroke-width="2" fill="none"/><line x1="15" y1="15" x2="19" y2="19" stroke="#00eaff" stroke-width="2"/></svg></button>
+            </div>
+        </header>
+
+        <div class="stream-page-container">
+            <!-- Sidebar (Filters / Categories) -->
+            <aside class="stream-sidebar">
+                <div class="sidebar-section">
+                    <h3>Categories</h3>
+                    <ul class="sidebar-categories">
+                        <li class="active">All</li>
+                        <li>Games</li>
+                        <li>Popular</li>
+                        <li>Following</li>
+                        <li>Featured</li>
+                    </ul>
+                </div>
+                <div class="sidebar-section">
+                    <h3>Sort By</h3>
+                    <ul class="sidebar-sort">
+                        <li class="active">Most Viewers</li>
+                        <li>Recently Started</li>
+                        <li>Trending</li>
+                    </ul>
+                </div>
+                <div class="sidebar-section recommended">
+                    <h3>Recommended Streams</h3>
+                    <ul class="recommended-list">
+                        <li>
+                            <img src="../img/avatar.svg" alt="Streamer Avatar" class="streamer-avatar">
+                            <span>GamerX</span>
+                        </li>
+                        <li>
+                            <img src="../img/avatar.svg" alt="Streamer Avatar" class="streamer-avatar">
+                            <span>ProPlayer</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="stream-main-content">
+                <!-- Featured Live Stream -->
+                <section class="featured-stream">
+                    <!-- Featured Stream will be rendered dynamically by JS -->
+                    <div id="featured-stream-dynamic"></div>
+                </section>
+
+                <!-- Live Streams Grid -->
+                <section class="live-streams-grid">
+                    <h3>Live Now</h3>
+                    <div class="streams-grid">
+                        <!-- Stream Card Example with Video -->
+                        <div class="stream-card">
+                            <div class="stream-thumb-container" style="position:relative;">
+                                <iframe class="stream-thumb" src="https://www.youtube.com/embed/kiQFlbqXANE?si=ZV5ISB35jJaVsySc&autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0" title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="width:100%;height:100%;aspect-ratio:16/9;border-radius:10px;"></iframe>
+                                <div style="position:absolute;top:10px;left:10px;background:#ff0000;color:#fff;font-weight:900;font-size:1em;padding:0.18em 0.9em 0.18em 0.9em;border-radius:3px;letter-spacing:1px;line-height:1;box-shadow:none;text-shadow:none;display:inline-block;">LIVE</div>
+                                <div class="viewer-count" style="position:absolute;bottom:10px;right:10px;">8.2K</div>
+                            </div>
+                            <div class="stream-card-info">
+                                <img class="streamer-avatar" src="../img/avatar.svg" alt="Streamer Avatar">
+                                <div class="streamer-details">
+                                    <span class="stream-title">Speedrun Challenge</span>
+                                    <span class="streamer-name neon-text">ProPlayer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Repeat .stream-card for more streams -->
+                        <div class="stream-card">
+                            <div class="stream-thumb-container">
+                                <img class="stream-thumb" src="../img/stream2.jpg" alt="Stream Thumbnail">
+                                <div style="position:absolute;top:10px;left:10px;background:#ff0000;color:#fff;font-weight:900;font-size:1em;padding:0.18em 0.9em 0.18em 0.9em;border-radius:3px;letter-spacing:1px;line-height:1;box-shadow:none;text-shadow:none;display:inline-block;">LIVE</div>
+                                <div class="viewer-count">5.1K</div>
+                            </div>
+                            <div class="stream-card-info">
+                                <img class="streamer-avatar" src="../img/avatar.svg" alt="Streamer Avatar">
+                                <div class="streamer-details">
+                                    <span class="stream-title">Strategy Masterclass</span>
+                                    <span class="streamer-name">ChessGuru</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add more cards as needed -->
+                    </div>
+                    <!-- Pagination / Infinite Scroll Placeholder -->
+                    <div class="pagination">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span>...</span>
+                        <button class="page-btn">Next</button>
+                    </div>
+                </section>
+
+                <!-- Upcoming Streams Section -->
+                <section class="upcoming-streams">
+                    <h3>Upcoming Streams</h3>
+                    <div class="upcoming-list">
+                        <div class="upcoming-card">
+                            <img class="streamer-avatar" src="../img/avatar.svg" alt="Streamer Avatar">
+                            <div class="upcoming-info">
+                                <span class="stream-title">Indie Game Reveal</span>
+                                <span class="streamer-name">IndieDev</span>
+                                <span class="scheduled-time">Dec 5, 7:00 PM</span>
+                            </div>
+                            <button class="reminder-btn">Set Reminder</button>
+                        </div>
+                        <div class="upcoming-card">
+                            <img class="streamer-avatar" src="../img/avatar.svg" alt="Streamer Avatar">
+                            <div class="upcoming-info">
+                                <span class="stream-title">FPS Showdown</span>
+                                <span class="streamer-name">SharpShooter</span>
+                                <span class="scheduled-time">Dec 6, 9:30 PM</span>
+                            </div>
+                            <button class="reminder-btn">Set Reminder</button>
+                        </div>
+                        <!-- Add more upcoming cards as needed -->
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="../js/stream.js"></script>
+</body>
+</html>

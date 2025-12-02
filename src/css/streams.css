@@ -1,0 +1,18 @@
+/* Streams page main styles */
+:root {
+    --neon-blue: #00e0ff;
+    --neon-purple: #7b00ff;
+    --primary-bg: #0a0f1f;
+    --secondary-bg: #101624;
+    --glass-bg: rgba(16, 22, 36, 0.85);
+    --text-main: #e6e8ef;
+    --text-muted: #b0b6c3;
+    --card-radius: 1.2rem;
+}
+body {
+    background: var(--primary-bg);
+    color: var(--text-main);
+    font-family: 'Inter', Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}

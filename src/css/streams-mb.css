@@ -1,0 +1,6 @@
+/* Responsive styles for Streams page */
+@media (max-width: 900px) {
+    body {
+        font-size: 0.98rem;
+    }
+}
