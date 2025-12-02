@@ -293,7 +293,7 @@ body {
 .stream-search-bar input:focus {
   color: #eaf6fb;
 }
-}
+
 .search-icon {
   display: flex;
   align-items: center;

@@ -128,6 +128,57 @@ document.addEventListener('DOMContentLoaded', function() {
 // Handles filters, hover previews, sidebar toggling, and interactive elements
 
 document.addEventListener('DOMContentLoaded', function () {
+    // --- Search Bar Filtering ---
+    const searchInput = document.querySelector('.stream-search-bar input');
+    if (searchInput) {
+      searchInput.addEventListener('input', function () {
+        const query = this.value.trim().toLowerCase();
+        let filtered = liveStreams.filter(s =>
+          s.title.toLowerCase().includes(query) ||
+          s.streamer.toLowerCase().includes(query)
+        );
+        if (filtered.length === 0) filtered = liveStreams;
+        function renderFiltered(page = 1) {
+          const grid = document.querySelector('.streams-grid');
+          if (!grid) return;
+          grid.innerHTML = '';
+          const start = (page - 1) * streamsPerPage;
+          const end = start + streamsPerPage;
+          filtered.slice(start, end).forEach(stream => {
+            grid.innerHTML += `
+              <div class="stream-card">
+                <div class="stream-thumb-container" style="position:relative;">
+                  ${stream.video ? `<iframe class='stream-thumb' src='${stream.video}' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen style='width:100%;height:100%;aspect-ratio:16/9;border-radius:10px;'></iframe>` : `<img class='stream-thumb' src='${stream.thumb}' alt='Stream Thumbnail'>`}
+                  ${stream.live ? `<div style='position:absolute;top:10px;left:10px;background:#ff0000;color:#fff;font-weight:900;font-size:1em;padding:0.18em 0.9em 0.18em 0.9em;border-radius:3px;letter-spacing:1px;line-height:1;box-shadow:none;text-shadow:none;display:inline-block;'>LIVE</div>` : ''}
+                  <div class="viewer-count" style="position:absolute;bottom:10px;right:10px;">${stream.viewers}</div>
+                </div>
+                <div class="stream-card-info">
+                  <img class="streamer-avatar" src="${stream.avatar}" alt="Streamer Avatar">
+                  <div class="streamer-details">
+                    <span class="stream-title">${stream.title}</span>
+                    <span class="streamer-name">${stream.streamer}</span>
+                  </div>
+                </div>
+              </div>
+            `;
+          });
+          document.querySelectorAll('.pagination .page-btn').forEach((btn, idx) => {
+            btn.classList.toggle('active', idx + 1 === page);
+          });
+        }
+        document.querySelectorAll('.pagination .page-btn').forEach((btn, idx, arr) => {
+          btn.onclick = function() {
+            if (btn.textContent === 'Next') {
+              const current = arr.findIndex(b => b.classList.contains('active'));
+              if (current < arr.length - 2) renderFiltered(current + 2);
+            } else {
+              renderFiltered(Number(btn.textContent));
+            }
+          };
+        });
+        renderFiltered(1);
+      });
+    }
   // --- Dynamic Featured Stream Data ---
   const featuredStream = {
     featured: [
